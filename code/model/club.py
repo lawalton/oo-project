@@ -28,6 +28,10 @@ class Club():
 
     def setNumMembers(self, numMembers):
         self.numMembers = numMembers
+
+    def addMember(self, student):
+        self.listOfMembers.append(student)
+        self.numMembers += 1
     
 
 
