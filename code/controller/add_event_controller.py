@@ -24,7 +24,7 @@ class AddNewEvent(QtGui.QDialog, add_new_event.Ui_Dialog):
             return
 
         date = self.event_datetime_in.dateTime()
-        string_date = date.toString("ddd MMMM d yy")
+        string_date = date.toString("dddd, MMMM d yyyy")
         self.event = Event(self.event_name_in.text(), string_date )
 
         if self.task_line_edit_in.toPlainText() != "":

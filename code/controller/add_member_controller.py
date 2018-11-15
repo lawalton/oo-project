@@ -41,17 +41,7 @@ class AddNewMember(QtGui.QDialog, add_new_member.Ui_Dialog):
             self.member.setNumEventsAttended(int(self.num_events_input.text()))
 
         self.accept()
-        
-        # TODO - only for proof of concept purpose - remove later
-        #self.club.addMember(new_member)
-        #text = self.name_input.text() + " has been added!"
-        #numMembers = self.club.getNumMembers();
-        #clubName = self.club.getName();
-        #text += "\n" + clubName + " has " + str(numMembers) + " members:\n"
-        #members = self.club.getListOfMembers()
-        #for member in members:
-        #    text += " " + member.getName() + ""
-        #self.showMessage(text)
+
     def getMember(self):
         return self.member
 

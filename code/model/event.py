@@ -19,6 +19,14 @@ class Event():
 
     def addTask(self, new_task):
         self.listOfTasks.append(new_task)
+    
+    def getInfo(self):
+        str = self.getName() + " is on " + self.getDate() + "."
+        str += " The tasks required for it are:\n"
+        for task in self.listOfTasks:
+            str += task.getName() + "\n"
+
+        return str
 
 
 

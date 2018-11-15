@@ -34,18 +34,19 @@ class Member(Student):
         self.isActiveMember = memberStatus
 
     def getNumEventsAttended(self):
-        return self.getNumEventsAttended
+        return self.numEventsAttended
 
     def setNumEventsAttended(self, num):
         self.numEventsAttended = num
 
     def getInfo(self):
-        member_str = self.getName() + "is"
+        member_str = self.getName() + " is a " + str(self.getYear()) + ", is "
         if self.getIsActiveMember():
-            member_str += "an active member"
+            member_str += "an active member "
         else:
-            member_str += "not an active member"
-        event_str = "and has attended with" + self.getNumEventsAttended() + "events."
+            member_str += "not an active member "
+        num_events = self.getNumEventsAttended()
+        event_str = "and has attended " + str(num_events) + " events."
 
         return (member_str + event_str)
 
@@ -56,20 +57,20 @@ class Officer(Student):
         self.numEventsHelped = 0
 
     def getPosition(self):
-        return position
+        return self.position
 
     def setPosition(self, position):
         self.position = position
 
     def getNumEventsHelped(self):
-        return self.getNumEventsHelped
+        return self.numEventsHelped
 
     def setNumEventsHelped(self, num):
         self.numEventsHelped = num
 
     def getInfo(self):
-        position_str = self.getName() + "is the" + self.getPosition()
-        event_str = "and has helped with" + self.getNumEventsHelped() + "events."
+        position_str = self.getName() + " is a " + str(self.getYear()) + ", is the " + str(self.getPosition())
+        event_str = " and has helped with " + str(self.getNumEventsHelped()) + " events."
         return (position_str + event_str)
 
 

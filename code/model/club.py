@@ -35,6 +35,20 @@ class Club():
 
     def addEvent(self, event):
         self.listOfEvents.append(event)
+
+    def findMember(self, name):
+        for member in self.getListOfMembers():
+            if member.getName() == name:
+                return member
+
+        return "No member with the name" + name + "found."
+
+    def findEvent(self, name):
+        for event in self.getListOfEvents():
+            if event.getName() == name:
+                return event
+
+        return "No event with the name" + name + "found."
     
 
 
