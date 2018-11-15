@@ -32,6 +32,9 @@ class Club():
     def addMember(self, student):
         self.listOfMembers.append(student)
         self.numMembers += 1
+
+    def addEvent(self, event):
+        self.listOfEvents.append(event)
     
 
 
