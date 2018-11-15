@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'add_member.ui'
+# Form implementation generated from reading ui file 'add_new_member.ui'
 #
 # Created by: PyQt4 UI code generator 4.11.4
 #
@@ -22,19 +22,13 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.widget = QtGui.QWidget(self.centralwidget)
-        self.widget.setObjectName(_fromUtf8("widget"))
-        self.gridLayout = QtGui.QGridLayout(self.widget)
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName(_fromUtf8("Dialog"))
+        Dialog.resize(682, 552)
+        self.gridLayout = QtGui.QGridLayout(Dialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.widget_2 = QtGui.QWidget(self.widget)
+        self.widget_2 = QtGui.QWidget(Dialog)
         self.widget_2.setObjectName(_fromUtf8("widget_2"))
         self.verticalLayout = QtGui.QVBoxLayout(self.widget_2)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
@@ -89,27 +83,18 @@ class Ui_MainWindow(object):
         self.add_member_btn.setObjectName(_fromUtf8("add_member_btn"))
         self.verticalLayout.addWidget(self.add_member_btn)
         self.gridLayout.addWidget(self.widget_2, 0, 0, 1, 1)
-        self.horizontalLayout.addWidget(self.widget)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
-        self.menubar.setObjectName(_fromUtf8("menubar"))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtGui.QStatusBar(MainWindow)
-        self.statusbar.setObjectName(_fromUtf8("statusbar"))
-        MainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.add_member_title_label.setText(_translate("MainWindow", "Add New Member", None))
-        self.name_label.setText(_translate("MainWindow", "Name:", None))
-        self.year_label.setText(_translate("MainWindow", "Year in School:", None))
-        self.officer_label.setText(_translate("MainWindow", "Officer?", None))
-        self.officer_checkbox.setText(_translate("MainWindow", "Yes", None))
-        self.position_label.setText(_translate("MainWindow", "Position:", None))
-        self.num_events_label.setText(_translate("MainWindow", "Number of events attended:", None))
-        self.add_member_btn.setText(_translate("MainWindow", "Add Member", None))
+    def retranslateUi(self, Dialog):
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog", None))
+        self.add_member_title_label.setText(_translate("Dialog", "Add New Member", None))
+        self.name_label.setText(_translate("Dialog", "Name:", None))
+        self.year_label.setText(_translate("Dialog", "Year in School:", None))
+        self.officer_label.setText(_translate("Dialog", "Officer?", None))
+        self.officer_checkbox.setText(_translate("Dialog", "Yes", None))
+        self.position_label.setText(_translate("Dialog", "Position:", None))
+        self.num_events_label.setText(_translate("Dialog", "Number of events attended:", None))
+        self.add_member_btn.setText(_translate("Dialog", "Add Member", None))
 
