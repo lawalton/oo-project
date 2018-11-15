@@ -1,6 +1,7 @@
 from PyQt4 import QtGui, QtCore
 from ..view import add_new_event
 from ..model.event import *
+from ..model.task import *
 
 class AddNewEvent(QtGui.QDialog, add_new_event.Ui_Dialog):
     def __init__(self):
@@ -32,7 +33,10 @@ class AddNewEvent(QtGui.QDialog, add_new_event.Ui_Dialog):
         self.accept()
         
     def createTasks(self):
-        print("Doing a thing")
+        tasks = self.task_line_edit_in.toPlainText()
+        for task in tasks.splitlines():
+            new_task = Task(task, "")
+            self.event.addTask(new_task)
 
     def getEvent(self):
         return self.event

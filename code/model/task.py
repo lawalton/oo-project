@@ -1,4 +1,3 @@
-from student import Student
 class Task():
     def __init__(self, name, student):
         self.name = name
