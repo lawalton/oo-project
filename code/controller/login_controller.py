@@ -1,4 +1,7 @@
 from PyQt4 import QtGui, QtCore
+import sys, os
+dirname = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(dirname)
 from ..view import login
 
 class Login(QtGui.QDialog, login.Ui_Dialog):
@@ -25,6 +28,27 @@ class Login(QtGui.QDialog, login.Ui_Dialog):
             return
 
         #TODO add functionality to check info
+        file_name = dirname + "\passwords.txt"
+        file = open(file_name, "r")
+        found = False
+        for line in file.readlines():
+            line = line.replace(" ", "")
+            args = line.split(",")
+            if args[0] == self.username_input.text():
+                # acceptable username, check password
+                if args[1] == self.password_input.text():
+                    found = True
+                    self.accept()
+                else:
+                    text = "Incorrect password"
+                    self.showMessage(text)
+                    return
+
+        # username not found
+        if found == False:
+            text = "Username not found."
+            self.showMessage(text)
+            return
 
         self.accept()
 
