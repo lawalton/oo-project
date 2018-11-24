@@ -11,12 +11,15 @@ from code.model.event import *
 from PyQt4 import QtGui, QtCore
 
 class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
-    def __init__(self):
+    def __init__(self, privs):
         super(self.__class__, self).__init__()
         self.setupUi(self)
         
         # TODO - fix later - for proof of concept right now
         self.club = Club("WIC")
+
+        # Assign privileges to current user
+        self.privs = privs
 
         # functionality for adding members
         self.m_dialog = AddNewMember()
@@ -87,9 +90,9 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
 
 def main():
     app = QtGui.QApplication(sys.argv)  
-    form = App()    
-    login = Login()
-    if login.exec_() == QtGui.QDialog.Accepted:
+    my_login = Login()
+    if my_login.exec_() == QtGui.QDialog.Accepted:
+        form = App(my_login.getPrivs())    
         form.show()                         
         app.exec_()                         
 

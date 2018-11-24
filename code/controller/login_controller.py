@@ -8,6 +8,7 @@ class Login(QtGui.QDialog, login.Ui_Dialog):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
+        self.privs = False
         
         # don't display password
         self.password_input.setEchoMode(QtGui.QLineEdit.Password)
@@ -38,7 +39,10 @@ class Login(QtGui.QDialog, login.Ui_Dialog):
                 # acceptable username, check password
                 if args[1] == self.password_input.text():
                     found = True
-                    self.accept()
+                    privs = args[2].strip()
+                    if privs == "t":
+                        # user is an officer, has elevated privileges
+                        self.privs = True
                 else:
                     text = "Incorrect password"
                     self.showMessage(text)
@@ -51,6 +55,9 @@ class Login(QtGui.QDialog, login.Ui_Dialog):
             return
 
         self.accept()
+
+    def getPrivs(self):
+        return self.privs
 
     def showMessage(self, text):
         msgBox = QtGui.QMessageBox();
