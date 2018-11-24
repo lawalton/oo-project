@@ -1,8 +1,10 @@
 import sys
 from code.view import main_window
 from code.view import add_new_member
+from code.view import login
 from code.controller.add_member_controller import *
 from code.controller.add_event_controller import *
+from code.controller.login_controller import *
 from code.model.club import *
 from code.model.student import *
 from code.model.event import *
@@ -85,9 +87,11 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
 
 def main():
     app = QtGui.QApplication(sys.argv)  
-    form = App()                
-    form.show()                         
-    app.exec_()                         
+    form = App()    
+    login = Login()
+    if login.exec_() == QtGui.QDialog.Accepted:
+        form.show()                         
+        app.exec_()                         
 
 if __name__ == '__main__':
     main() 
