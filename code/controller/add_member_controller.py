@@ -1,12 +1,17 @@
 from PyQt4 import QtGui, QtCore
 from ..view import add_new_member
 from ..model.student import *
+from ..model.studentfactory import *
 
 class AddNewMember(QtGui.QDialog, add_new_member.Ui_Dialog):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
         self.member = None
+
+        # create Factory 
+        self.studentFactory = StudentFactory()
+
         # set up buttons
         self.add_member_btn.clicked.connect(self.add_member_fxn)
 
@@ -32,14 +37,19 @@ class AddNewMember(QtGui.QDialog, add_new_member.Ui_Dialog):
             self.showMessage(text)
             return
 
+        # get inputs
+        name = self.name_input.text()
+        year = self.year_combo_box.currentText()
+        num_events = int(self.num_events_input.text())
+        args = [num_events]
         if self.officer_checkbox.isChecked():
-            self.member = Officer(self.name_input.text(), self.year_combo_box.currentText());
-            self.member.setPosition(self.position_entry.text())
-            self.member.setNumEventsHelped(int(self.num_events_input.text()))
-        else:
-            self.member = Member(self.name_input.text(), self.year_combo_box.currentText());
-            self.member.setNumEventsAttended(int(self.num_events_input.text()))
+            type = "officer"
+            args.append(self.position_entry.text())
 
+        else:
+            type = "member"
+
+        self.member = self.studentFactory.getStudent(type, name, year, args)
         self.accept()
 
     def getMember(self):
