@@ -21,6 +21,11 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
         # Assign privileges to current user
         self.privs = privs
 
+        if not self.privs:
+            # user doesn't have privileges to add new members or events
+            self.add_member_btn.hide()
+            self.add_event_btn.hide()
+
         # functionality for adding members
         self.m_dialog = AddNewMember()
         self.add_member_btn.clicked.connect(self.add_member_clicked)
