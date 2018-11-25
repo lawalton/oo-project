@@ -12,15 +12,21 @@ from code.model.event import *
 from PyQt4 import QtGui, QtCore
 
 class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
-    def __init__(self, privs):
+    def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
-        
-        # TODO - fix later - for proof of concept right now
-        self.club = Club("WIC")
+       
+        self.club = Club("name")
+        self.hide()
+        my_login = Login()
+        if my_login.exec_() == QtGui.QDialog.Accepted:
+            self.show()
+            self.privs = my_login.getPrivs()
+
+        #logout button
+        self.logout_btn.clicked.connect(self.logout_fxn)
 
         # Assign privileges to current user
-        self.privs = privs
 
         if not self.privs:
             # user doesn't have privileges to add new members or events
@@ -106,14 +112,19 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
                 for updated_member in updated_members:
                     self.club.updateMember(updated_member)
 
+    def logout_fxn(self):
+        self.hide()
+        my_login = Login()
+        if my_login.exec_() == QtGui.QDialog.Accepted:
+            self.show()
+            self.privs = my_login.getPrivs()
+
 
 def main():
     app = QtGui.QApplication(sys.argv)  
-    my_login = Login()
-    if my_login.exec_() == QtGui.QDialog.Accepted:
-        form = App(my_login.getPrivs())    
-        form.show()                         
-        app.exec_()                         
+    form = App()
+    form.show()                         
+    app.exec_()                         
 
 if __name__ == '__main__':
     main() 
