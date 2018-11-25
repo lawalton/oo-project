@@ -9,13 +9,14 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
         self.setupUi(self)
         self.event = event
         self.club = club
+        self.updatedMembers = []
 
         self.populate_details()
 
         # set up buttons
         self.complete_task_btn.clicked.connect(self.complete_task_fxn)
         #self.assign_task_btn.clicked.connect(self.assign_task_fxn)
-        #self.member_attended_btn.clicked.connect(self.member_attended_fxn)
+        self.member_attended_btn.clicked.connect(self.member_attended_fxn)
         self.save_btn.clicked.connect(self.save_fxn)
 
     def populate_details(self):
@@ -29,16 +30,21 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
         # get list of members
         for member in self.club.getListOfMembers():
             text = member.getName()
+            if self.event.getName() in member.getEvents():
+                text += " - " + member.getEventString()
             self.member_list_view.addItem(text)
 
     def display_tasks(self):
         # get list of tasks
         for task in self.event.getTasks():
             text = task.getName()
+            if task.getIsComplete():
+                text += " - completed"
+            
             self.task_list_view.addItem(text)
 
     def complete_task_fxn(self):
-        # get selected member
+        # get selected task
         sel_tasks = self.task_list_view.selectedItems()
         if len(sel_tasks) == 0:
             text = "Please select a task."
@@ -50,12 +56,39 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
             return
 
         for task in sel_tasks:
+            original_task_name = task.text()
             task.setText(task.text() + ' - completed')
+            task_object = self.event.findTask(original_task_name)
+            task_object.setIsComplete(True)
+
+    def member_attended_fxn(self):
+        sel_member = self.member_list_view.selectedItems()
+        if len(sel_member) == 0:
+            text = "Please select a member."
+            self.showMessage(text)
+            return
+        if len(sel_member) > 1:
+            text = "Please select only one task."
+            self.showMessage(text)
+            return
+
+        for member in sel_member:
+            original_member_name = member.text()
+            member_object = self.club.findMember(original_member_name)
+            member.setText(member.text() + ' - ' + member_object.getEventString())
+            member_object.addEvent(self.event.getName())
+            member_object.eventAttended()
+            self.updatedMembers.append(member_object)
        
     def getEvent(self):
         return self.event
 
+    def getUpdatedMembers(self):
+        return self.updatedMembers
+
     def save_fxn(self):
+        for task in self.event.getTasks():
+            text = task.getName() + " - " + str(task.getIsComplete())
         self.accept()
 
     def showMessage(self, text):

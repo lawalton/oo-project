@@ -49,6 +49,29 @@ class Club():
                 return event
 
         return "No event with the name" + name + "found."
+
+    def updateEvent(self, name, edited_event):
+        i = 0
+        for event in self.listOfEvents:
+            if event.getName() == name:
+                self.listOfEvents[i] = edited_event
+                return True
+
+            i += 1
+        # unable to update event
+        return False
+
+    def updateMember(self, edited_member):
+        i = 0
+        name = edited_member.getName()
+        for member in self.listOfMembers:
+            if member.getName() == name:
+                self.listOfMembers[i] = edited_member
+                return True
+
+            i += 1
+        # unable to update member
+        return False
     
 
 

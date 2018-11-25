@@ -21,11 +21,28 @@ class Student(abc.ABC):
     def getInfo(self):
         return ""
 
+    @abc.abstractmethod
+    def eventAttended(self):
+        return ""
+
+    @abc.abstractmethod
+    def getEventString(self):
+        return ""
+
+    @abc.abstractmethod
+    def addEvent(self, event):
+        return None
+
+    @abc.abstractmethod
+    def getEvents(self):
+        return None
+
 class Member(Student):
     def __init__(self, name, year):
         Student.__init__(self, name, year)
         self.isActiveMember = False
         self.numEventsAttended = 0
+        self.eventsAttended = []
 
     def getIsActiveMember(self):
         return self.isActiveMember
@@ -38,6 +55,18 @@ class Member(Student):
 
     def setNumEventsAttended(self, num):
         self.numEventsAttended = num
+
+    def getEvents(self):
+        return self.eventsAttended
+
+    def addEvent(self, event):
+        self.eventsAttended.append(event)
+
+    def eventAttended(self):
+        self.numEventsAttended += 1
+
+    def getEventString(self):
+        return "attended"
 
     def getInfo(self):
         member_str = self.getName() + " is a " + str(self.getYear()) + ", is "
@@ -55,6 +84,7 @@ class Officer(Student):
         Student.__init__(self, name, year)
         self.position = ""
         self.numEventsHelped = 0
+        self.eventsHelped = []
 
     def getPosition(self):
         return self.position
@@ -67,6 +97,18 @@ class Officer(Student):
 
     def setNumEventsHelped(self, num):
         self.numEventsHelped = num
+
+    def getEvents(self):
+        return self.eventsHelped
+
+    def addEvent(self, event):
+        self.eventsHelped.append(event)
+
+    def eventAttended(self):
+        self.numEventsHelped += 1
+
+    def getEventString(self):
+        return "helped"
 
     def getInfo(self):
         position_str = self.getName() + " is a " + str(self.getYear()) + ", is the " + str(self.getPosition())

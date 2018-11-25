@@ -94,9 +94,18 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
         event = self.club.findEvent(event_name)
         self.details_dialog = EventDetails(event, self.club)
         self.details_dialog.show()
-        #if self.m_dialog.exec_():
+        if self.details_dialog.exec_():
+            edited_event = self.details_dialog.getEvent()
+            # find original event and update
+            updated = self.club.updateEvent(event_name, edited_event)
+            if not updated:
+                text = "Error: unable to update event"
+                self.showMessage(text)
+            updated_members = self.details_dialog.getUpdatedMembers()
+            if len(updated_members) > 0:
+                for updated_member in updated_members:
+                    self.club.updateMember(updated_member)
 
-        #self.showMessage(event.getInfo())
 
 def main():
     app = QtGui.QApplication(sys.argv)  

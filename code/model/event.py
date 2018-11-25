@@ -36,7 +36,7 @@ class Event():
             if task.getName() == name:
                 return task
 
-        return "No task with the name" + name + "found."
+        return None
 
 
 
