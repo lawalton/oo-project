@@ -5,6 +5,7 @@ from code.view import login
 from code.controller.add_member_controller import *
 from code.controller.add_event_controller import *
 from code.controller.login_controller import *
+from code.controller.event_details_controller import *
 from code.model.club import *
 from code.model.student import *
 from code.model.event import *
@@ -91,7 +92,11 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
 
         event_name = events[0].data()
         event = self.club.findEvent(event_name)
-        self.showMessage(event.getInfo())
+        self.details_dialog = EventDetails(event, self.club)
+        self.details_dialog.show()
+        #if self.m_dialog.exec_():
+
+        #self.showMessage(event.getInfo())
 
 def main():
     app = QtGui.QApplication(sys.argv)  

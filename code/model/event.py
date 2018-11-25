@@ -19,6 +19,9 @@ class Event():
 
     def addTask(self, new_task):
         self.listOfTasks.append(new_task)
+
+    def getTasks(self):
+        return self.listOfTasks
     
     def getInfo(self):
         str = self.getName() + " is on " + self.getDate() + "."
@@ -27,6 +30,13 @@ class Event():
             str += task.getName() + "\n"
 
         return str
+
+    def findTask(self, name):
+        for task in self.getTasks():
+            if task.getName() == name:
+                return task
+
+        return "No task with the name" + name + "found."
 
 
 
