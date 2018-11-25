@@ -35,7 +35,7 @@ class AddNewEvent(QtGui.QDialog, add_new_event.Ui_Dialog):
     def createTasks(self):
         tasks = self.task_line_edit_in.toPlainText()
         for task in tasks.splitlines():
-            new_task = Task(task, "")
+            new_task = Task(task)
             self.event.addTask(new_task)
 
     def getEvent(self):

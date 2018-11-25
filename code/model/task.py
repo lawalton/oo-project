@@ -1,7 +1,7 @@
 class Task():
-    def __init__(self, name, student):
+    def __init__(self, name):
         self.name = name
-        self.assignee = student
+        self.assignee = None
         self.isComplete = False
         self.priority = 0
 

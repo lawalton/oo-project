@@ -15,7 +15,7 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
 
         # set up buttons
         self.complete_task_btn.clicked.connect(self.complete_task_fxn)
-        #self.assign_task_btn.clicked.connect(self.assign_task_fxn)
+        self.assign_task_btn.clicked.connect(self.assign_task_fxn)
         self.member_attended_btn.clicked.connect(self.member_attended_fxn)
         self.save_btn.clicked.connect(self.save_fxn)
 
@@ -38,6 +38,8 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
         # get list of tasks
         for task in self.event.getTasks():
             text = task.getName()
+            if task.getAssignee() is not None:
+                text += " - assigned to " + str(task.getAssignee().getName())
             if task.getIsComplete():
                 text += " - completed"
             
@@ -56,9 +58,8 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
             return
 
         for task in sel_tasks:
-            original_task_name = task.text()
             task.setText(task.text() + ' - completed')
-            task_object = self.event.findTask(original_task_name)
+            task_object = self.event.findTask(task.text().split("-")[0].strip())
             task_object.setIsComplete(True)
 
     def member_attended_fxn(self):
@@ -68,17 +69,45 @@ class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
             self.showMessage(text)
             return
         if len(sel_member) > 1:
-            text = "Please select only one task."
+            text = "Please select only one member."
             self.showMessage(text)
             return
 
         for member in sel_member:
-            original_member_name = member.text()
-            member_object = self.club.findMember(original_member_name)
+            member_object = self.club.findMember(member.text().split("-")[0].strip())
             member.setText(member.text() + ' - ' + member_object.getEventString())
             member_object.addEvent(self.event.getName())
             member_object.eventAttended()
             self.updatedMembers.append(member_object)
+
+    def assign_task_fxn(self):
+        sel_member = self.member_list_view.selectedItems()
+        if len(sel_member) == 0:
+            text = "Please select a member."
+            self.showMessage(text)
+            return
+        if len(sel_member) > 1:
+            text = "Please select only one member."
+            self.showMessage(text)
+            return
+
+        sel_tasks = self.task_list_view.selectedItems()
+        if len(sel_tasks) == 0:
+            text = "Please select a task."
+            self.showMessage(text)
+            return
+        if len(sel_tasks) > 1:
+            text = "Please select only one task."
+            self.showMessage(text)
+            return
+
+        member = sel_member[0]
+        task = sel_tasks[0]
+        member_object = self.club.findMember(member.text().split("-")[0].strip())
+        task_object = self.event.findTask(task.text().split("-")[0].strip())
+        task_object.setAssignee(member_object)
+        task.setText(task.text() + ' - assigned to ' + member_object.getName())
+
        
     def getEvent(self):
         return self.event
