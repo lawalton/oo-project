@@ -3,7 +3,7 @@ from ..view import add_new_member
 from ..model.student import *
 from ..model.studentfactory import *
 
-class AddNewMember(QtGui.QDialog, add_new_member.Ui_Dialog):
+class AddNewMemberController(QtGui.QDialog, add_new_member.Ui_Dialog):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)

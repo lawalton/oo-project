@@ -18,10 +18,10 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
        
         self.club = Club("name")
         self.hide()
-        my_login = Login()
-        if my_login.exec_() == QtGui.QDialog.Accepted:
+        login = LoginController()
+        if login.exec_() == QtGui.QDialog.Accepted:
             self.show()
-            self.privs = my_login.getPrivs()
+            self.privs = login.getPrivs()
 
         #logout button
         self.logout_btn.clicked.connect(self.logout_fxn)
@@ -34,7 +34,7 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
             self.add_event_btn.hide()
 
         # functionality for adding members
-        self.m_dialog = AddNewMember()
+        self.m_dialog = AddNewMemberController()
         self.add_member_btn.clicked.connect(self.add_member_clicked)
         self.member_list_model = QtGui.QStandardItemModel(self.member_list_view)
         self.member_list_view.setModel(self.member_list_model)
@@ -42,7 +42,7 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
         self.view_member_btn.clicked.connect(self.view_member_clicked)
 
          # functionality for adding events
-        self.e_dialog = AddNewEvent()
+        self.e_dialog = AddNewEventController()
         self.add_event_btn.clicked.connect(self.add_event_clicked)
         self.event_list_model = QtGui.QStandardItemModel(self.event_list_view)
         self.event_list_view.setModel(self.event_list_model)
@@ -98,7 +98,7 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
 
         event_name = events[0].data()
         event = self.club.findEvent(event_name)
-        self.details_dialog = EventDetails(event, self.club)
+        self.details_dialog = EventDetailsController(event, self.club)
         self.details_dialog.show()
         if self.details_dialog.exec_():
             edited_event = self.details_dialog.getEvent()
@@ -114,8 +114,8 @@ class App(QtGui.QMainWindow, main_window.Ui_MainWindow):
 
     def logout_fxn(self):
         self.hide()
-        my_login = Login()
-        if my_login.exec_() == QtGui.QDialog.Accepted:
+        login = LoginController()
+        if login.exec_() == QtGui.QDialog.Accepted:
             self.show()
-            self.privs = my_login.getPrivs()
+            self.privs = login.getPrivs()
 

@@ -4,7 +4,7 @@ dirname = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(dirname)
 from ..view import login
 
-class Login(QtGui.QDialog, login.Ui_Dialog):
+class LoginController(QtGui.QDialog, login.Ui_Dialog):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
@@ -28,7 +28,6 @@ class Login(QtGui.QDialog, login.Ui_Dialog):
             self.showMessage(text)
             return
 
-        #TODO add functionality to check info
         file_name = dirname + "\passwords.txt"
         file = open(file_name, "r")
         found = False

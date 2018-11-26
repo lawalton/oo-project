@@ -3,7 +3,6 @@ class Task():
         self.name = name
         self.assignee = None
         self.isComplete = False
-        self.priority = 0
 
     def getName(self):
         return self.name
@@ -22,12 +21,6 @@ class Task():
 
     def setIsComplete(self, isComplete):
         self.isComplete = isComplete
-
-    def getPriority(self):
-        return self.priority
-
-    def setPriority(self, priority):
-        self.priority = priority
 
 
 

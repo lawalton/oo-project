@@ -3,7 +3,7 @@ from ..view import event_details
 from ..model.event import *
 from ..model.task import *
 
-class EventDetails(QtGui.QDialog, event_details.Ui_Dialog):
+class EventDetailsController(QtGui.QDialog, event_details.Ui_Dialog):
     def __init__(self, event, club):
         super(self.__class__, self).__init__()
         self.setupUi(self)

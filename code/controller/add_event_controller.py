@@ -3,7 +3,7 @@ from ..view import add_new_event
 from ..model.event import *
 from ..model.task import *
 
-class AddNewEvent(QtGui.QDialog, add_new_event.Ui_Dialog):
+class AddNewEventController(QtGui.QDialog, add_new_event.Ui_Dialog):
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
