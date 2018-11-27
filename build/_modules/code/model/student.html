@@ -1,0 +1,376 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>code.model.student &#8212; club_management_system  documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for code.model.student</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">abc</span>
+<div class="viewcode-block" id="Student"><a class="viewcode-back" href="../../../index.html#code.model.student.Student">[docs]</a><span class="k">class</span> <span class="nc">Student</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Defines a student in a club. </span>
+<span class="sd">    Abstract class.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span>
+
+<div class="viewcode-block" id="Student.getName"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.getName">[docs]</a>    <span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the name of the student</span>
+
+<span class="sd">        :return: name of the student</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span></div>
+
+<div class="viewcode-block" id="Student.setName"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.setName">[docs]</a>    <span class="k">def</span> <span class="nf">setName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the name of the student.</span>
+
+<span class="sd">        :param str name: name of the student</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span></div>
+
+<div class="viewcode-block" id="Student.getYear"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.getYear">[docs]</a>    <span class="k">def</span> <span class="nf">getYear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the academic year of the student</span>
+
+<span class="sd">        :return: academic year of the student</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span></div>
+
+<div class="viewcode-block" id="Student.setYear"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.setYear">[docs]</a>    <span class="k">def</span> <span class="nf">setYear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the academic year of the student</span>
+
+<span class="sd">        :param str year: academic year of the student </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">year</span></div>
+
+<div class="viewcode-block" id="Student.getInfo"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.getInfo">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string with info about the student.</span>
+<span class="sd">        Abstract method. </span>
+
+<span class="sd">        :return: info about student</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Student.eventAttended"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.eventAttended">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">eventAttended</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Records the student attending an event. </span>
+<span class="sd">        Abstract method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Student.getEventString"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.getEventString">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">getEventString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string about the student attending or helping with an event. </span>
+<span class="sd">        Abstract method</span>
+
+<span class="sd">        :return: how the student interacted with the event: attended or helped</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Student.addEvent"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.addEvent">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">addEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add event to the student&#39;s list of events.</span>
+<span class="sd">        Abstract method.</span>
+
+<span class="sd">        :param Event event: the event that the student attended or helped with</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Student.getEvents"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Student.getEvents">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">getEvents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get list of the events the student has attended or helped with.</span>
+<span class="sd">        Abstract method.</span>
+
+<span class="sd">        :return: list of events the student has attended or helped with.</span>
+<span class="sd">        :rtype: list[Event]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="kc">None</span></div></div>
+
+<div class="viewcode-block" id="Member"><a class="viewcode-back" href="../../../index.html#code.model.student.Member">[docs]</a><span class="k">class</span> <span class="nc">Member</span><span class="p">(</span><span class="n">Student</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="n">Student</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isActiveMember</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsAttended</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventsAttended</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Member.getIsActiveMember"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.getIsActiveMember">[docs]</a>    <span class="k">def</span> <span class="nf">getIsActiveMember</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the member&#39;s active member status</span>
+<span class="sd">        </span>
+<span class="sd">        :return: the member&#39;s active member status</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">isActiveMember</span></div>
+
+<div class="viewcode-block" id="Member.setIsActiveMember"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.setIsActiveMember">[docs]</a>    <span class="k">def</span> <span class="nf">setIsActiveMember</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">memberStatus</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the member&#39;s active member status.</span>
+
+<span class="sd">        :param bool memberStatus: the member&#39;s new active member status</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">isActiveMember</span> <span class="o">=</span> <span class="n">memberStatus</span></div>
+
+<div class="viewcode-block" id="Member.getNumEventsAttended"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.getNumEventsAttended">[docs]</a>    <span class="k">def</span> <span class="nf">getNumEventsAttended</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the number of events the member has attended.</span>
+<span class="sd">        </span>
+<span class="sd">        :return: the number of events the member has attended.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">numEventsAttended</span></div>
+
+<div class="viewcode-block" id="Member.setNumEventsAttended"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.setNumEventsAttended">[docs]</a>    <span class="k">def</span> <span class="nf">setNumEventsAttended</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the number of events the member has attended.</span>
+
+<span class="sd">        :param int num: number of events the member has attended.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsAttended</span> <span class="o">=</span> <span class="n">num</span></div>
+
+<div class="viewcode-block" id="Member.getEvents"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.getEvents">[docs]</a>    <span class="k">def</span> <span class="nf">getEvents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get list of the events the student has attended.</span>
+
+<span class="sd">        :return: list of events the student has attended.</span>
+<span class="sd">        :rtype: list[Event]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventsAttended</span></div>
+
+<div class="viewcode-block" id="Member.addEvent"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.addEvent">[docs]</a>    <span class="k">def</span> <span class="nf">addEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add event to the student&#39;s list of attended events</span>
+
+<span class="sd">        :param Event event: the event that the student attended</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventsAttended</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Member.eventAttended"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.eventAttended">[docs]</a>    <span class="k">def</span> <span class="nf">eventAttended</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Records the member attending an event. </span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsAttended</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="Member.getEventString"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.getEventString">[docs]</a>    <span class="k">def</span> <span class="nf">getEventString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string about the student attending with an event. </span>
+
+<span class="sd">        :return: how the student interacted with the event: attended</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;attended&quot;</span></div>
+
+<div class="viewcode-block" id="Member.getInfo"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Member.getInfo">[docs]</a>    <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string with info about the member.</span>
+
+<span class="sd">        :return: info about student</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">member_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; is a &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getYear</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;, is &quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">getIsActiveMember</span><span class="p">():</span>
+            <span class="n">member_str</span> <span class="o">+=</span> <span class="s2">&quot;an active member &quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">member_str</span> <span class="o">+=</span> <span class="s2">&quot;not an active member &quot;</span>
+        <span class="n">num_events</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getNumEventsAttended</span><span class="p">()</span>
+        <span class="n">event_str</span> <span class="o">=</span> <span class="s2">&quot;and has attended &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_events</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; events.&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">member_str</span> <span class="o">+</span> <span class="n">event_str</span><span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="Officer"><a class="viewcode-back" href="../../../index.html#code.model.student.Officer">[docs]</a><span class="k">class</span> <span class="nc">Officer</span><span class="p">(</span><span class="n">Student</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">):</span>
+        <span class="n">Student</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsHelped</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventsHelped</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="Officer.getPosition"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.getPosition">[docs]</a>    <span class="k">def</span> <span class="nf">getPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the officer&#39;s position.</span>
+
+<span class="sd">        :return: the officer&#39;s position</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">position</span></div>
+
+<div class="viewcode-block" id="Officer.setPosition"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.setPosition">[docs]</a>    <span class="k">def</span> <span class="nf">setPosition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the officer&#39;s position.</span>
+
+<span class="sd">        :param str position: the officer&#39;s position</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">position</span> <span class="o">=</span> <span class="n">position</span></div>
+
+<div class="viewcode-block" id="Officer.getNumEventsHelped"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.getNumEventsHelped">[docs]</a>    <span class="k">def</span> <span class="nf">getNumEventsHelped</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the number of events the member has helped with.</span>
+<span class="sd">        </span>
+<span class="sd">        :return: the number of events the member has helped with.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">numEventsHelped</span></div>
+
+<div class="viewcode-block" id="Officer.setNumEventsHelped"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.setNumEventsHelped">[docs]</a>    <span class="k">def</span> <span class="nf">setNumEventsHelped</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the number of events the member has helped with.</span>
+
+<span class="sd">        :param int num: number of events the member has helped with.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsHelped</span> <span class="o">=</span> <span class="n">num</span></div>
+
+<div class="viewcode-block" id="Officer.getEvents"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.getEvents">[docs]</a>    <span class="k">def</span> <span class="nf">getEvents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get list of the events the student has helped with.</span>
+
+<span class="sd">        :return: list of events the student has helped with.</span>
+<span class="sd">        :rtype: list[Event]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">eventsHelped</span></div>
+
+<div class="viewcode-block" id="Officer.addEvent"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.addEvent">[docs]</a>    <span class="k">def</span> <span class="nf">addEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add event to the student&#39;s list of events that they helped with</span>
+
+<span class="sd">        :param Event event: the event that the student helped with</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eventsHelped</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Officer.eventAttended"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.eventAttended">[docs]</a>    <span class="k">def</span> <span class="nf">eventAttended</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Records the officer helping with an event. </span>
+<span class="sd">        Abstract method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numEventsHelped</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+<div class="viewcode-block" id="Officer.getEventString"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.getEventString">[docs]</a>    <span class="k">def</span> <span class="nf">getEventString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string about the student helping with an event. </span>
+
+<span class="sd">        :return: how the student interacted with the event: helped</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;helped&quot;</span></div>
+
+<div class="viewcode-block" id="Officer.getInfo"><a class="viewcode-back" href="../../../code.model.html#code.model.student.Officer.getInfo">[docs]</a>    <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string with info about the officer.</span>
+
+<span class="sd">        :return: info about student</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">position_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; is a &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getYear</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;, is the &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getPosition</span><span class="p">())</span>
+        <span class="n">event_str</span> <span class="o">=</span> <span class="s2">&quot; and has helped with &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">getNumEventsHelped</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot; events.&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">position_str</span> <span class="o">+</span> <span class="n">event_str</span><span class="p">)</span></div></div>
+
+
+
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">club_management_system</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Lindsay Walton.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

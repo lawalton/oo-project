@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>code.model package &#8212; club_management_system  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="code-model-package">
+<h1>code.model package<a class="headerlink" href="#code-model-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-code.model.club">
+<span id="code-model-club-module"></span><h2>code.model.club module<a class="headerlink" href="#module-code.model.club" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.model.club.Club">
+<em class="property">class </em><code class="descclassname">code.model.club.</code><code class="descname">Club</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines a club</p>
+<dl class="method">
+<dt id="code.model.club.Club.addEvent">
+<code class="descname">addEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.addEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.addEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new event to the club</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a>) – the new event</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.addMember">
+<code class="descname">addMember</code><span class="sig-paren">(</span><em>student</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.addMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.addMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new member to the club</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>student</strong> (<a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><em>Student</em></a>) – the new member</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.findEvent">
+<code class="descname">findEvent</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.findEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.findEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a club event by name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the name of the event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the club event</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.findMember">
+<code class="descname">findMember</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.findMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.findMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a club member by name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the name of the member</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the club member</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student">Student</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.getListOfEvents">
+<code class="descname">getListOfEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.getListOfEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.getListOfEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of club events</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of club events</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.getListOfMembers">
+<code class="descname">getListOfMembers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.getListOfMembers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.getListOfMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of club members</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of club members</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student">Student</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.getName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the club</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">name of the club</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.getNumMembers">
+<code class="descname">getNumMembers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.getNumMembers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.getNumMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of club members</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of club members</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.setListOfEvents">
+<code class="descname">setListOfEvents</code><span class="sig-paren">(</span><em>newList</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.setListOfEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.setListOfEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the list of club events</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newList</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a><em>]</em>) – list of club events</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.setListOfMembers">
+<code class="descname">setListOfMembers</code><span class="sig-paren">(</span><em>newList</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.setListOfMembers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.setListOfMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the list of club members</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newList</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a><em>[</em><a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><em>Student</em></a><em>]</em>) – list of club members</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.setName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the club.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – name of the club</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.setNumMembers">
+<code class="descname">setNumMembers</code><span class="sig-paren">(</span><em>numMembers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.setNumMembers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.setNumMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the number of club members</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>numMembers</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of club members</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.updateEvent">
+<code class="descname">updateEvent</code><span class="sig-paren">(</span><em>name</em>, <em>edited_event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.updateEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.updateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a club event</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the name of the event</li>
+<li><strong>edited_event</strong> (<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a>) – the updated event</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.club.Club.updateMember">
+<code class="descname">updateMember</code><span class="sig-paren">(</span><em>edited_member</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/club.html#Club.updateMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.club.Club.updateMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update a club member</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>edited_member</strong> (<a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><em>Student</em></a>) – the updated member</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.model.event">
+<span id="code-model-event-module"></span><h2>code.model.event module<a class="headerlink" href="#module-code.model.event" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.model.event.Event">
+<em class="property">class </em><code class="descclassname">code.model.event.</code><code class="descname">Event</code><span class="sig-paren">(</span><em>name</em>, <em>date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines a club event</p>
+<dl class="method">
+<dt id="code.model.event.Event.addTask">
+<code class="descname">addTask</code><span class="sig-paren">(</span><em>new_task</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.addTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.addTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new task to the event</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>new_task</strong> (<a class="reference internal" href="index.html#code.model.task.Task" title="code.model.task.Task"><em>Task</em></a>) – the new task for the event</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.findTask">
+<code class="descname">findTask</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.findTask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.findTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a task for the event by name</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the name of the task</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the task</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.task.Task" title="code.model.task.Task">Task</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.getDate">
+<code class="descname">getDate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.getDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.getDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the date of the club</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">date of the club</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.getName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the event</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">name of the event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.getTasks">
+<code class="descname">getTasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.getTasks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.getTasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of tasks for the event</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of tasks for the event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.task.Task" title="code.model.task.Task">Task</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.setDate">
+<code class="descname">setDate</code><span class="sig-paren">(</span><em>date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.setDate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.setDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the date of the event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – date of the event</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.event.Event.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/event.html#Event.setName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.event.Event.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the event</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – name of the event</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.model.student">
+<span id="code-model-student-module"></span><h2>code.model.student module<a class="headerlink" href="#module-code.model.student" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.model.student.Member">
+<em class="property">class </em><code class="descclassname">code.model.student.</code><code class="descname">Member</code><span class="sig-paren">(</span><em>name</em>, <em>year</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.model.student.Student</span></code></a></p>
+<dl class="method">
+<dt id="code.model.student.Member.addEvent">
+<code class="descname">addEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.addEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.addEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add event to the student’s list of attended events</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a>) – the event that the student attended</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.eventAttended">
+<code class="descname">eventAttended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.eventAttended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.eventAttended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the member attending an event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.getEventString">
+<code class="descname">getEventString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.getEventString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.getEventString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string about the student attending with an event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">how the student interacted with the event: attended</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.getEvents">
+<code class="descname">getEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.getEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.getEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of the events the student has attended.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of events the student has attended.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.getInfo">
+<code class="descname">getInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.getInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.getInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string with info about the member.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">info about student</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.getIsActiveMember">
+<code class="descname">getIsActiveMember</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.getIsActiveMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.getIsActiveMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the member’s active member status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the member’s active member status</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.getNumEventsAttended">
+<code class="descname">getNumEventsAttended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.getNumEventsAttended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.getNumEventsAttended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of events the member has attended.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the number of events the member has attended.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.setIsActiveMember">
+<code class="descname">setIsActiveMember</code><span class="sig-paren">(</span><em>memberStatus</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.setIsActiveMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.setIsActiveMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the member’s active member status.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>memberStatus</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – the member’s new active member status</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Member.setNumEventsAttended">
+<code class="descname">setNumEventsAttended</code><span class="sig-paren">(</span><em>num</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Member.setNumEventsAttended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Member.setNumEventsAttended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of events the member has attended.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of events the member has attended.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="code.model.student.Officer">
+<em class="property">class </em><code class="descclassname">code.model.student.</code><code class="descname">Officer</code><span class="sig-paren">(</span><em>name</em>, <em>year</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.model.student.Student</span></code></a></p>
+<dl class="method">
+<dt id="code.model.student.Officer.addEvent">
+<code class="descname">addEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.addEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.addEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add event to the student’s list of events that they helped with</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a>) – the event that the student helped with</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.eventAttended">
+<code class="descname">eventAttended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.eventAttended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.eventAttended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the officer helping with an event. 
+Abstract method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.getEventString">
+<code class="descname">getEventString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.getEventString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.getEventString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string about the student helping with an event.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">how the student interacted with the event: helped</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.getEvents">
+<code class="descname">getEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.getEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.getEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of the events the student has helped with.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of events the student has helped with.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.getInfo">
+<code class="descname">getInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.getInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.getInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string with info about the officer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">info about student</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.getNumEventsHelped">
+<code class="descname">getNumEventsHelped</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.getNumEventsHelped"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.getNumEventsHelped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of events the member has helped with.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the number of events the member has helped with.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.getPosition">
+<code class="descname">getPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.getPosition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.getPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the officer’s position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the officer’s position</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.setNumEventsHelped">
+<code class="descname">setNumEventsHelped</code><span class="sig-paren">(</span><em>num</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.setNumEventsHelped"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.setNumEventsHelped" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of events the member has helped with.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.7)"><em>int</em></a>) – number of events the member has helped with.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Officer.setPosition">
+<code class="descname">setPosition</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Officer.setPosition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Officer.setPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the officer’s position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the officer’s position</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="code.model.student.Student">
+<em class="property">class </em><code class="descclassname">code.model.student.</code><code class="descname">Student</code><span class="sig-paren">(</span><em>name</em>, <em>year</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<p>Defines a student in a club. 
+Abstract class.</p>
+<dl class="method">
+<dt id="code.model.student.Student.addEvent">
+<code class="descname">addEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.addEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.addEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add event to the student’s list of events.
+Abstract method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event"><em>Event</em></a>) – the event that the student attended or helped with</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.eventAttended">
+<code class="descname">eventAttended</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.eventAttended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.eventAttended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the student attending an event. 
+Abstract method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.getEventString">
+<code class="descname">getEventString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.getEventString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.getEventString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string about the student attending or helping with an event. 
+Abstract method</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">how the student interacted with the event: attended or helped</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.getEvents">
+<code class="descname">getEvents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.getEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.getEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of the events the student has attended or helped with.
+Abstract method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of events the student has attended or helped with.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.getInfo">
+<code class="descname">getInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.getInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.getInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string with info about the student.
+Abstract method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">info about student</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.getName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the student</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">name of the student</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.getYear">
+<code class="descname">getYear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.getYear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.getYear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the academic year of the student</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">academic year of the student</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.setName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the student.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – name of the student</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.student.Student.setYear">
+<code class="descname">setYear</code><span class="sig-paren">(</span><em>year</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/student.html#Student.setYear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.student.Student.setYear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the academic year of the student</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>year</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – academic year of the student</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.model.studentfactory">
+<span id="code-model-studentfactory-module"></span><h2>code.model.studentfactory module<a class="headerlink" href="#module-code.model.studentfactory" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.model.studentfactory.StudentFactory">
+<em class="property">class </em><code class="descclassname">code.model.studentfactory.</code><code class="descname">StudentFactory</code><a class="reference internal" href="_modules/code/model/studentfactory.html#StudentFactory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.studentfactory.StudentFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Creates different types of students</p>
+<dl class="method">
+<dt id="code.model.studentfactory.StudentFactory.getStudent">
+<code class="descname">getStudent</code><span class="sig-paren">(</span><em>studentType</em>, <em>name</em>, <em>year</em>, <em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/studentfactory.html#StudentFactory.getStudent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.studentfactory.StudentFactory.getStudent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a type of Student based on the type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>studentType</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – type of student</li>
+<li><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – student name</li>
+<li><strong>year</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – student’s academic year</li>
+<li><strong>args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><em>list</em></a>) – list of additional arguments required to create the student</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the student</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="index.html#code.model.student.Member" title="code.model.student.Member">Member</a> or <a class="reference internal" href="index.html#code.model.student.Officer" title="code.model.student.Officer">Officer</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.model.task">
+<span id="code-model-task-module"></span><h2>code.model.task module<a class="headerlink" href="#module-code.model.task" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.model.task.Task">
+<em class="property">class </em><code class="descclassname">code.model.task.</code><code class="descname">Task</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Defines a task for a club event.</p>
+<dl class="method">
+<dt id="code.model.task.Task.getAssignee">
+<code class="descname">getAssignee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.getAssignee"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.getAssignee" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the assignee of the task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the student assigned to the task</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student">Student</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.task.Task.getIsComplete">
+<code class="descname">getIsComplete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.getIsComplete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.getIsComplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the completion status of the task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the completion status of the task</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.task.Task.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.getName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the task</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">name of the task</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)">str</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.task.Task.setAssignee">
+<code class="descname">setAssignee</code><span class="sig-paren">(</span><em>assignee</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.setAssignee"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.setAssignee" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the assignee of the task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>assignee</strong> (<a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student"><em>Student</em></a>) – the student assigned to the task</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.task.Task.setIsComplete">
+<code class="descname">setIsComplete</code><span class="sig-paren">(</span><em>isComplete</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.setIsComplete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.setIsComplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the completion status of the task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>isComplete</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)"><em>bool</em></a>) – completion status of the task.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.model.task.Task.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/model/task.html#Task.setName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.model.task.Task.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the name of the task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – name of the task</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-code.model" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">club_management_system</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Lindsay Walton.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code.model.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

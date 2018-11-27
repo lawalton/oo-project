@@ -1,0 +1,358 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>code.controller package &#8212; club_management_system  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="code-controller-package">
+<h1>code.controller package<a class="headerlink" href="#code-controller-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-code.controller.add_event_controller">
+<span id="code-controller-add-event-controller-module"></span><h2>code.controller.add_event_controller module<a class="headerlink" href="#module-code.controller.add_event_controller" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.controller.add_event_controller.AddNewEventController">
+<em class="property">class </em><code class="descclassname">code.controller.add_event_controller.</code><code class="descname">AddNewEventController</code><a class="reference internal" href="_modules/code/controller/add_event_controller.html#AddNewEventController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_event_controller.AddNewEventController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt4.QtGui.QDialog</span></code>, <a class="reference internal" href="index.html#code.view.add_new_event.Ui_Dialog" title="code.view.add_new_event.Ui_Dialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.view.add_new_event.Ui_Dialog</span></code></a></p>
+<p>Controller for creating a new event.</p>
+<dl class="method">
+<dt id="code.controller.add_event_controller.AddNewEventController.add_event_fxn">
+<code class="descname">add_event_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_event_controller.html#AddNewEventController.add_event_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_event_controller.AddNewEventController.add_event_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for “Add Event” button. Run when user clicks the button, creates a new event
+based on user inputs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.add_event_controller.AddNewEventController.createTasks">
+<code class="descname">createTasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_event_controller.html#AddNewEventController.createTasks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_event_controller.AddNewEventController.createTasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates tasks for the new event. 
+Pulls the list of tasks from the widget that user entered and adds tasks to the event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.add_event_controller.AddNewEventController.getEvent">
+<code class="descname">getEvent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_event_controller.html#AddNewEventController.getEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_event_controller.AddNewEventController.getEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the new event created by the user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the new event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.add_event_controller.AddNewEventController.showMessage">
+<code class="descname">showMessage</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_event_controller.html#AddNewEventController.showMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_event_controller.AddNewEventController.showMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a pop-up message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the text to be displayed in the pop-up message box</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.controller.add_member_controller">
+<span id="code-controller-add-member-controller-module"></span><h2>code.controller.add_member_controller module<a class="headerlink" href="#module-code.controller.add_member_controller" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.controller.add_member_controller.AddNewMemberController">
+<em class="property">class </em><code class="descclassname">code.controller.add_member_controller.</code><code class="descname">AddNewMemberController</code><a class="reference internal" href="_modules/code/controller/add_member_controller.html#AddNewMemberController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_member_controller.AddNewMemberController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt4.QtGui.QDialog</span></code>, <a class="reference internal" href="index.html#code.view.add_new_member.Ui_Dialog" title="code.view.add_new_member.Ui_Dialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.view.add_new_member.Ui_Dialog</span></code></a></p>
+<p>Controller for creating a new member.</p>
+<dl class="method">
+<dt id="code.controller.add_member_controller.AddNewMemberController.add_member_fxn">
+<code class="descname">add_member_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_member_controller.html#AddNewMemberController.add_member_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_member_controller.AddNewMemberController.add_member_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for the “Add New Member” button. Run when the user clicks the button, creates
+a new member based on user inputs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.add_member_controller.AddNewMemberController.getMember">
+<code class="descname">getMember</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_member_controller.html#AddNewMemberController.getMember"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_member_controller.AddNewMemberController.getMember" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the new member created by the user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the new member</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student">Student</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.add_member_controller.AddNewMemberController.showMessage">
+<code class="descname">showMessage</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/add_member_controller.html#AddNewMemberController.showMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.add_member_controller.AddNewMemberController.showMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a pop-up message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the text to be displayed in the pop-up message box</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.controller.event_details_controller">
+<span id="code-controller-event-details-controller-module"></span><h2>code.controller.event_details_controller module<a class="headerlink" href="#module-code.controller.event_details_controller" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.controller.event_details_controller.EventDetailsController">
+<em class="property">class </em><code class="descclassname">code.controller.event_details_controller.</code><code class="descname">EventDetailsController</code><span class="sig-paren">(</span><em>event</em>, <em>club</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt4.QtGui.QDialog</span></code>, <a class="reference internal" href="index.html#code.view.event_details.Ui_Dialog" title="code.view.event_details.Ui_Dialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.view.event_details.Ui_Dialog</span></code></a></p>
+<p>Controller to display details of event.
+Allows a user to assign tasks to members, mark tasks as complete, and record member attendance.</p>
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.assign_task_fxn">
+<code class="descname">assign_task_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.assign_task_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.assign_task_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns the selected task to the selected member.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.complete_task_fxn">
+<code class="descname">complete_task_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.complete_task_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.complete_task_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the current task that user selected and marks it as completed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.display_members">
+<code class="descname">display_members</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.display_members"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.display_members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the list of members.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.display_tasks">
+<code class="descname">display_tasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.display_tasks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.display_tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the list of tasks.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.getEvent">
+<code class="descname">getEvent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.getEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.getEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the event that the user modified.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the new modified event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="index.html#code.model.event.Event" title="code.model.event.Event">Event</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.getUpdatedMembers">
+<code class="descname">getUpdatedMembers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.getUpdatedMembers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.getUpdatedMembers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of members that have been modified:
+assigned a task and/or marked as attended.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of modified members</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)">list</a>[<a class="reference internal" href="index.html#code.model.student.Student" title="code.model.student.Student">Student</a>]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.member_attended_fxn">
+<code class="descname">member_attended_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.member_attended_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.member_attended_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the current member that the user selected.
+If the member is an officer, mark them as “helped” with the event.
+If the member is a regular member, mark them as “attended” the event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.populate_details">
+<code class="descname">populate_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.populate_details"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.populate_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populates the window with the event details for the given event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.save_fxn">
+<code class="descname">save_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.save_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.save_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slot for the “Save” button. Run when the user selects to save an event.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.event_details_controller.EventDetailsController.showMessage">
+<code class="descname">showMessage</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/event_details_controller.html#EventDetailsController.showMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.event_details_controller.EventDetailsController.showMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a pop-up message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the text to be displayed in the pop-up message box</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.controller.login_controller">
+<span id="code-controller-login-controller-module"></span><h2>code.controller.login_controller module<a class="headerlink" href="#module-code.controller.login_controller" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="code.controller.login_controller.LoginController">
+<em class="property">class </em><code class="descclassname">code.controller.login_controller.</code><code class="descname">LoginController</code><a class="reference internal" href="_modules/code/controller/login_controller.html#LoginController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.login_controller.LoginController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt4.QtGui.QDialog</span></code>, <a class="reference internal" href="index.html#code.view.login.Ui_Dialog" title="code.view.login.Ui_Dialog"><code class="xref py py-class docutils literal notranslate"><span class="pre">code.view.login.Ui_Dialog</span></code></a></p>
+<p>Controller to allow a user to login.</p>
+<dl class="method">
+<dt id="code.controller.login_controller.LoginController.getPrivs">
+<code class="descname">getPrivs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/login_controller.html#LoginController.getPrivs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.login_controller.LoginController.getPrivs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the status of the privileges of the user logging in. Officers have elevated privileges.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Boolean representing if the user has elevated privileges</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.7)">bool</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.login_controller.LoginController.login_fxn">
+<code class="descname">login_fxn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/login_controller.html#LoginController.login_fxn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.login_controller.LoginController.login_fxn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the validity of the username and password.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="code.controller.login_controller.LoginController.showMessage">
+<code class="descname">showMessage</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/code/controller/login_controller.html#LoginController.showMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#code.controller.login_controller.LoginController.showMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays a pop-up message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.7)"><em>str</em></a>) – the text to be displayed in the pop-up message box</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-code.controller">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-code.controller" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">club_management_system</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Lindsay Walton.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/code.controller.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

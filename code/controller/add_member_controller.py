@@ -4,6 +4,9 @@ from ..model.student import *
 from ..model.studentfactory import *
 
 class AddNewMemberController(QtGui.QDialog, add_new_member.Ui_Dialog):
+    """
+    Controller for creating a new member.
+    """
     def __init__(self):
         super(self.__class__, self).__init__()
         self.setupUi(self)
@@ -21,6 +24,10 @@ class AddNewMemberController(QtGui.QDialog, add_new_member.Ui_Dialog):
             self.year_combo_box.addItem(item)
 
     def add_member_fxn(self):
+        """
+        Slot for the "Add New Member" button. Run when the user clicks the button, creates
+        a new member based on user inputs.
+        """
         # check that we have all inputs
         if self.name_input.text() == "":
             text = "Please enter the student's name."
@@ -53,9 +60,20 @@ class AddNewMemberController(QtGui.QDialog, add_new_member.Ui_Dialog):
         self.accept()
 
     def getMember(self):
+        """
+        Returns the new member created by the user
+
+        :return: the new member
+        :rtype: Student
+        """
         return self.member
 
     def showMessage(self, text):
+        """
+        Displays a pop-up message
+
+        :param str text: the text to be displayed in the pop-up message box
+        """
         msgBox = QtGui.QMessageBox();
         msgBox.setText(text);
         msgBox.exec_();
